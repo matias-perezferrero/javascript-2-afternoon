@@ -14,8 +14,12 @@
   Then alert your name using dot notation.
 */
 
-//Code here
+var me = {
+  name:"Matias Perez",
+  age: 25  
+};//Code here
 
+alert(me.name);
 
 
 ////////// PROBLEM 2 //////////
@@ -25,7 +29,14 @@
   Have the values to those keys be your favorite thing in that category.
 */
 
-//Code here
+var favoriteThings = {
+  band: "Bad Rabbits",
+  food: "veggie burrito",
+  person: "Amanda",
+  book: "The Lord of the Rings",
+  movie: "Tangled",
+  holiday: "Christmas"
+};//Code here
 
 
 
@@ -33,7 +44,8 @@
   After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
 */
 
-//Code here
+favoriteThings.car = "1969 Corvette";
+favoriteThings.brand = "Columbia";//Code here
 
 
 
@@ -41,7 +53,8 @@
   Now change the value of the food key in your favoriteThings object to be 'Chicken Nuggets' and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
 
-//Code here
+favoriteThings.food = 'Chicken Nuggets';
+favoriteThings.book = 'Harry Potter';//Code here
 
 
 
@@ -55,14 +68,19 @@
   Using dot notation, add another key (or property) to your backPack object that is named color, with the value being the color of your backpack. 
 */
 
+var backPack = {};
+
+var item = 'firstPocket';
+
+backPack[item] = 'chapstick';
+
+backPack.color = 'black';
 //Code here
-
-
 
 /*
   After you do the above, alert your entire backPack object.
 */
-
+console.log(backPack);
 //Code here
 
 
@@ -96,7 +114,8 @@ var user2 = {
   Make that change without modifying the original object code above.
 */
 
-//Code Here
+user2.name = "Tyler S. McGinnis";
+user2.email = "tyler.mcginnis@devmounta.in";//Code Here
 
 
 
@@ -119,7 +138,7 @@ var user2 = {
   Create an empty object called methodCollection.
 */
 
-//Code Here
+var methodCollection = {};//Code Here
 
 
 
@@ -128,7 +147,8 @@ var user2 = {
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console. 
 */
 
-//Code Here
+methodCollection.alertHello = function(){alert('hello')}
+methodCollection.logHello = function(){console.log('hello')}//Code Here
 
 
 
@@ -136,7 +156,8 @@ var user2 = {
   Now call your alertHello and logHello methods.
 */
 
-//Code Here
+methodCollection.alertHello();
+methodCollection.logHello();//Code Here
 
 
 
@@ -147,7 +168,14 @@ var user2 = {
   Return a new object with all of the information that you passed in.
 */
 
-//Code Here
+function makePerson(name, birthday, ssn){
+  var newObject = {
+    name,
+    birthday,
+    ssn
+  }
+  return newObject;
+}//Code Here
 
 
 
@@ -158,6 +186,19 @@ var user2 = {
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-//Code Here
+function makeCard(cardNumber, expirationDate, securityCode){
+  var creditCard = {
+    cardNumber,
+    expirationDate,
+    securityCode
+  }
+  return creditCard;
+}//Code Here
+
+// var cards = []
+
+// for(let i=0; i<100; i++){
+//   cards[i] = makeCard( )
+// }
 
 
